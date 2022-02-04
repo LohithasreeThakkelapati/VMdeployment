@@ -111,19 +111,20 @@ resource "google_compute_instance" "instance2" {
     tags = ["vm-tag","http-server"]
   
 }
-resource "google_storage_bucket" "MULTI_REGIONAL" {
-  name     = "apache-tomcat"
+resource "google_storage_bucket" "bucket" {
+  //bucket name unique
+  name     = "server23769916"
   storage_class = "STANDARD"
   location = "us-central1"
   
-  uniform_bucket_level_access = false
+  uniform_bucket_level_access = true
  
   
 }
-resource "google_storage_bucket_object" "html" {
+resource "google_storage_bucket_object" "object" {
   name   = "apacheindex"
   source = "C:/Users/THLOHITH/Downloads/apache-tomcat-8.5.75-windows-x64/apache-tomcat-8.5.75/webapps/docs/index.html"
-  bucket = "${google_storage_bucket.MULTI_REGIONAL.name}"
+  bucket = "${google_storage_bucket.bucket.name}"
 }
 
 resource "google_compute_router" "router" {
