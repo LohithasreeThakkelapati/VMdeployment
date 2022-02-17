@@ -1,0 +1,4 @@
+Description: Using the gcp native cloud snapshot/Machine image, setup a backup and restore process.  Also extend the same back to build a DR setup using IaC
+
+Apache Tomcat:
+Apache Tomcat is an opensource web server and servlet container developed by the Apache Software Foundation (ASF). The goal of apache tomcat is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards. Apache Tomcat powers numerous large-scale, mission-critical web applications across a diverse range of industries and organizations.
